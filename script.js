@@ -11,10 +11,11 @@ var inc = document.getElementById("inc");
 var dec = document.getElementById("dec");
 
 function addInput(){
-    display.innerHTML = input.innerHTML;
+    let display = 0; 
+    return display + input;
     console.log("input worked");
 }
-inc.addEventListener(onclick, addInput);
+inc.addEventListener(onsubmit, addInput);
 
 
 
