@@ -22,7 +22,7 @@ let i = 0;
 
 //objects are easier to understand than functions, and their parts
 function addOne(){
-    display.innerHTML += i++;
+    display.innerHTML += parseInt(inc.value);
 }
 inc.addEventListener(onclick, addOne);
 
