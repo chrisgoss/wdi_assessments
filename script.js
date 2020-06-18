@@ -8,13 +8,24 @@ console.log("we loggin consoles");
 var display = document.getElementById("display");
 var input = document.getElementById("input");
 var inc = document.getElementById("inc");
-var dec = document.getElementById("inc");
+var dec = document.getElementById("dec");
 
-function addOne(){
-    display.innerHTML = inc++;
-    console.log("inc worked");
+function addInput(){
+    display.innerHTML = input.innerHTML;
+    console.log("input worked");
 }
-inc.addEventListener(onclick, addOne);
+inc.addEventListener(onclick, addInput);
+
+
+
+
+
+
+// function addOne(){
+//     display.innerHTML = inc++;
+//     console.log("inc worked");
+// }
+// inc.addEventListener(onclick, addOne);
 
 
 
