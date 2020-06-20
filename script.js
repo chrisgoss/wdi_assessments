@@ -11,28 +11,56 @@ console.log("we loggin consoles");
 //https://www.freecodecamp.org/news/how-to-build-an-html-calculator-app-from-scratch-using-javascript-4454b8714b98/
 
 
+// upon input change, update h1 (change could be submit or just value change)
+// - adding an "onchange" event handler to the input 
+
+// make sure that shit is an int (optional)
+
+// make input value increase on tapping + button 
+// - adding a "click" event on inc
+// callback for that would increase the value of input
+
+// make input value decrease on tapping - button
+// - adding a "click" event on dec
+// callback for that would decrease the value of input
+
+
+
 var display = document.getElementById("display");
 var input = document.getElementById("input");
 var inc = document.getElementById("inc");
 var dec = document.getElementById("dec");
-//still don't get the difference between var/let besides var is global, and let cannot be access outside where it was declared?
-let i = 0;
 
-
-
-//objects are easier to understand than functions, and their parts
-function addOne(){
-    display.innerHTML += parseInt(inc.value);
+function updateDisplay(e){
+    display.innerText = e.target.value;
 }
-inc.addEventListener(onclick, addOne);
+// e is the event object, in this case it's a "change" event object 
 
 
 
+input.addEventListener("change", updateDisplay);
 
-// document.getElementById("increment").addEventListener("mouseover", "click");
-// document.getElementById("decrement").addEventListener("mouseover", "click");
+function increase(){
+    input.value++
+    changeColor()
+    display.innerText = input.value
+}
 
-// function increment() value ++
-// function decrement value --
+inc.addEventListener("click", increase);
+function decrease(){
+    input.value--
+    changeColor()
+    display.innerText = input.value
+}
+dec.addEventListener("click", decrease);
 
-// var display = display >= 0 ? "black" : "red";
+
+
+function changeColor(){
+    if (input.value < 0) {
+        display.style.color = "crimson";
+    }
+    if (input.value >= 0) {
+        display.style.color = "dodgerblue"
+    }
+}

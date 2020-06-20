@@ -1,3 +1,14 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 * {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
@@ -6,6 +17,7 @@
 }
 #display{
     font-size: 2rem;
+    color: blue;
 }
 body {
     margin: 0; 
